@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilay Vatsal - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>Nilay Vatsal</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="hero">
+        <div class="profile-picture"></div>
+        <div class="hero-content" data-aos="fade-up">
+            <h2>Nilay Vatsal</h2>
+            <p>M.Tech in CSIS at IIIT Hyderabad</p>
+        </div>
+    </section>
+    <main>
+        <div class="container">
+            <section id="about">
+                <h2>About Me</h2> <!-- Removed data-aos attribute -->
+                <p>Hello, I am Nilay Vatsal, currently persuing M.Tech in Computer Science and Information 
+                    security from IIIT Hyderabad. I have great interest in the fields of Web Development, Android Development
+                    and Core System Development.
+                </p>
+                <p>Apart from these, I love to play sports, like Football, Cricket or anything which requires going outdoors. I also enjoy playing video games
+                    and these days I am enjoying Valorant a lot. Hit me up for a quick chat on music, travelling, sports, programming or anything which maps to
+                    to refreshment.
+                </p>
+                 </section>
+            <section id="skills">
+                <h2 data-aos="fade-up" data-aos-duration="1000">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="100">C++</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="150">Pyhton</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="200">Java</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="250">SQL</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="300">HTML/CSS</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="350">Linux</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="400">Flask</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="450">OOPS</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="500">DBMS</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="550">Android Development</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="600">GitHub</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="650">API</div>
+                </div>
+            </section>
+            <section id="projects">
+                <h2 data-aos="fade-up" data-aos-duration="1000">Projects</h2>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="project1.jpeg" alt="E-commerce Platform">
+                    <a href = "https://github.com/VatsalNilay/NimbleShell" target="_blank">
+                        <h3>Nimble Shell</h3>
+                    </a>
+                    <p>A fully functioning terminal, where commands like echo, ls, cd are implemented from stack.
+                        Designed a modular architecture to handle complex user inputs, ensuring robust error handling and signal
+management.
+                    </p>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="project2.jpeg" alt="Portfolio Website">
+                    <a href="https://github.com/VatsalNilay/SkillSync" target="_blank">
+                        <h3>Skill Sync</h3>
+                    </a>
+                    
+                    <p>
+                        An android app which recommends course to students based on their responses in a quiz. The app also connect students
+                        to alumni based on their interest.
+                    </p>
+                </div>
+            </section>
+            
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Email: <a href="vatsalnilay21@gmail.com">vatsalnilay21@gmail.com</a></p>
+                <p>Phone: +918709331318</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/nilay-vatsal" >Nilay Vatsal-LinkedIN</a></p>
+                <p>GitHub: <a href="https://github.com/VatsalNilay">Nilay Vatsal-Github</a></p>
+            </section>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 600, // Duration of the animations in milliseconds
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

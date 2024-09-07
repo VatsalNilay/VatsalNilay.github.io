@@ -1,0 +1,250 @@
+/* General Styles */
+:root {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --heading-color: #ffffff;
+    --link-color: #66b3ff;
+    --border-color: #444444;
+    --accent-color: #2980b9;
+    --header-bg: #2c3e50;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: all 0.3s ease;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+#hero {
+    background-color: rgb(26,26,26);
+    height: 40vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0; /* No extra margin */
+}
+
+
+main {
+    padding: 4px 2px;
+    position: relative;
+    margin-top: 0; /* Ensure there is no extra margin */
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    background: url('hero.jpeg') no-repeat center center/cover;
+    border-radius: 0%;
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.hero-content {
+    max-width: 600px;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.additional-content {
+    max-width: 600px;
+    margin-top: 0; /* Set to 0 to remove spacing */
+    font-size: 1.2em;
+}
+
+
+/* Updated margins to reduce space between sections */
+#about {
+    margin-top: 20px; /* Reduced margin to adjust spacing */
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.adcontentditional- {
+    max-width: 600px;
+    margin-top: 0; /* Set to 0 to remove spacing */
+    font-size: 1.2em;
+}
+
+/* main {
+    padding: 4px 2px;
+    position: relative;
+} */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 60px; /* This is for spacing between sections */
+    padding-top: 80px; /* Adjust this if necessary */
+    position: relative;
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+    text-align: center;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill-item {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.9em;
+    opacity: 0; /* Hidden by default for AOS */
+    transition: opacity 0.3s ease-in-out; /* Faster animation */
+}
+
+/* Projects Section */
+.project-card {
+    background-color: var(--header-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0; /* Hidden by default for AOS */
+    transition: opacity 0.3s ease-in-out; /* Faster animation */
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.testimonial-card {
+    background-color: var(--header-bg);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
+/* Scroll Adjustment */
+:target::before {
+    content: "";
+    display: block;
+    height: 80px; /* Adjust this value based on your header height */
+    margin: -80px 0 0; /* Negative margin equal to the height */
+}
