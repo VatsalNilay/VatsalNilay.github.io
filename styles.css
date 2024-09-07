@@ -1,12 +1,12 @@
-/* General Styles */
-:root {
+:root{
     --bg-color: #1a1a1a;
-    --text-color: #f0f0f0;
+    --text-color: #ffffff;
     --heading-color: #ffffff;
     --link-color: #66b3ff;
     --border-color: #444444;
     --accent-color: #2980b9;
     --header-bg: #2c3e50;
+
 }
 
 body {
@@ -36,7 +36,7 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 5px;
+    padding: 0 20px;
 }
 
 .logo h1 {
@@ -79,172 +79,168 @@ nav ul li a:hover {
 }
 
 .burger div {
-    width: 25px;
-    height: 3px;
     background-color: var(--text-color);
-    transition: transform 0.3s ease;
+    height: 3px;
+    width: 25px;
+    border-radius: 5px;
 }
+
 #hero {
-    background-color: rgb(26,26,26);
-    height: 40vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--text-color);
+    height: 400px;
+    background-color: rgba(26,26,26);
     text-align: center;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 0; /* No extra margin */
-}
-
-
-main {
-    padding: 4px 2px;
-    position: relative;
-    margin-top: 0; /* Ensure there is no extra margin */
+    color: var(--text-color);
 }
 
 .profile-picture {
-    width: 150px;
-    height: 150px;
     background: url('hero.jpeg') no-repeat center center/cover;
-    border-radius: 0%;
-    border: 5px solid var(--accent-color);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    margin-bottom: 10px; /* Reduced margin */
+    border-radius: 30%;
+    width: 200px;
+    height: 200px;
+    margin: 20px 0;
 }
 
-.hero-content {
+.hero-content 
+{
     max-width: 600px;
-    margin-bottom: 10px; /* Reduced margin */
-}
-
-.additional-content {
-    max-width: 600px;
-    margin-top: 0; /* Set to 0 to remove spacing */
-    font-size: 1.2em;
-}
-
-
-/* Updated margins to reduce space between sections */
-#about {
-    margin-top: 20px; /* Reduced margin to adjust spacing */
 }
 
 .hero-content h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 0;
 }
 
-.hero-content {
-    max-width: 600px;
-    margin-bottom: 10px; /* Reduced margin */
-}
-
-.adcontentditional- {
-    max-width: 600px;
-    margin-top: 0; /* Set to 0 to remove spacing */
+.hero-content p {
     font-size: 1.2em;
 }
 
-/* main {
-    padding: 4px 2px;
-    position: relative;
-} */
+main {
+    padding: 40px 20px;
+}
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 section {
-    margin-bottom: 60px; /* This is for spacing between sections */
-    padding-top: 80px; /* Adjust this if necessary */
-    position: relative;
+    margin-bottom: 60px;
 }
 
-h1, h2, h3 {
+h2 {
+    font-size: 2em;
     color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#about {
     text-align: center;
 }
 
-/* Skills Section */
+.skills-box {
+    border: 2px solid var(--border-color); /* Box border */
+    padding: 20px;
+    margin: 20px auto; /* Centering the box */
+    max-width: 800px; /* Width limit */
+    background-color: var(--bg-color); /* Background color for the box */
+    border-radius: 8px; /* Rounded corners for the box */
+}
+
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 10px;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    justify-items: center;
 }
 
 .skill-item {
-    background-color: var(--accent-color);
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 0.9em;
-    opacity: 0; /* Hidden by default for AOS */
-    transition: opacity 0.3s ease-in-out; /* Faster animation */
-}
-
-/* Projects Section */
-.project-card {
-    background-color: var(--header-bg);
+    background: var(--border-color);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    text-align: center;
-    opacity: 0; /* Hidden by default for AOS */
-    transition: opacity 0.3s ease-in-out; /* Faster animation */
-}
-
-.project-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.testimonial-card {
-    background-color: var(--header-bg);
-    padding: 15px;
     border-radius: 5px;
-    margin-bottom: 15px;
+    text-align: center;
+    color: var(--text-color);
+    height: 40px; /* Fixed height for uniform size */
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects {
+    color: var(--text-color);
     text-align: center;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 20px;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    .burger {
-        display: flex;
-    }
-
-    nav.active ul {
-        display: flex;
-    }
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Scroll Adjustment */
-:target::before {
-    content: "";
-    display: block;
-    height: 80px; /* Adjust this value based on your header height */
-    margin: -80px 0 0; /* Negative margin equal to the height */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%; /* Responsive width */
+    max-width: 350px; /* Maximum width to keep the layout uniform */
+    height: 400px; /* Fixed height to maintain consistency */
+    color: var(--text-color);
+}
+
+.project-card-image {
+    width: 100%;
+    height: 150px; /* Fixed height for all images */
+    background-size: cover;
+    background-position: center;
+}
+
+.project-card-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.project-card-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+.project-card-content p {
+    margin: 0;
+}
+
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-icons .icon {
+    color: var(--text-color);
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.contact-icons .icon:hover {
+    color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
 }
