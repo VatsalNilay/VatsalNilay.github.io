@@ -19,7 +19,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#links">Contact</a></li>
                     <li><a href="./nilayVatsal.pdf" target="_blank">Resume</a></li>
                 </ul>
             </nav>
@@ -42,13 +42,13 @@
             <section id="about">
                 <h2 data-aos="fade-up" data-aos-duration="300" >About Me</h2>
                 <p data-aos="fade-up" data-aos-duration="600"> Hello, I am Nilay Vatsal, currently pursuing M.Tech in Computer Science and Information 
-                    Security from IIIT Hyderabad. <br>I have great interest in the fields of Web Development, Android Development
-                    and Core System Development. <br> <br>
-            Apart from these, I love to play sports, like Football, Cricket or anything which requires going outdoors. I also enjoy playing <br> video games
-                    and these days I am enjoying Valorant a lot. Hit me up for a quick chat on music, travelling, sports, <br> programming or anything which maps to
+                    Security from IIIT Hyderabad. <br>I have great interest in the fields of Core System Development, Competitive Programming, Secure Systems, Machine Learning and Android Development.
+                    <br> <br>
+            Apart from these, I love to play outdoor sports, including Football, Cricket or anything which requires going outdoors. I enjoy playing <br> video games and these days I am enjoying Valorant a lot. Hit me up for a quick chat on music, travelling, sports, <br> programming or anything which maps to
                     refreshment.
                 </p>
             </section>
+            
             <section id="skills">
                 <h2 data-aos="fade-up" data-aos-duration="300">Skills</h2>
                 <!-- Adding a container for skills box -->
@@ -59,107 +59,264 @@
                         <div class="skill-item" data-aos="fade-up" data-aos-delay="100">Java</div>
                         <div class="skill-item" data-aos="fade-up" data-aos-delay="100">Flask</div>
                         <div class="skill-item" data-aos="fade-up" data-aos-delay="100">OOPS</div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">SQL</div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">API</div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">Linux</div>
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">OS</div>
                         <div class="skill-item" data-aos="fade-up" data-aos-delay="100">DBMS</div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">Android Development</div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">HTML/CSS</div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">GitHub</div>
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">SQL</div>
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">Git</div>
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">Linux</div>
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">Machine Learning</div>
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">MERN</div>
                     </div>
                 </div>
             </section>
             
             <section id="projects">
                 <h2 data-aos="fade-up" data-aos-duration="300">Projects</h2>
-                <div class="projects-container">
-                    <!-- Existing Project Cards -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <a href="https://github.com/VatsalNilay/NimbleShell" target="_blank" style="color: white; text-decoration: none;">
-                            <div class="project-card-image" style="background-image: url('project1.jpeg');"></div>
-                            <div class="project-card-content">
-                                <h3>Nimble Shell</h3>
-                                <p>A fully functioning terminal, where commands like echo, ls, cd are implemented from scratch.
-                                    Designed a modular architecture to handle complex user inputs, ensuring robust error handling and signal management.
-                                </p>
-                            </div>
-                        </a>
+                <div class="project-filters" data-aos="fade-up" data-aos-duration="300">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="system">Systems</button>
+                    <button class="filter-btn" data-filter="security">Security</button>
+                    <button class="filter-btn" data-filter="ai">AI</button>
+                    <button class="filter-btn" data-filter="web">Misc.</button>
+                </div>
+                <div class="projects-wrapper">
+                    <button class="scroll-btn left" style="display: none;">&lt;</button>
+                    <div class="projects-container">
+                        <!-- Existing Project Cards -->
+                        <div class="project-card" data-category="system" data-aos="fade-up" data-aos-delay="100">
+                            <a href="https://github.com/VatsalNilay/PeerLink" target="_blank" style="color: white; text-decoration: none;">
+                                <div class="project-card-image" style="background-image: url('static/miniT.png');"></div>
+                                <div class="project-card-title">
+                                    <h3>Mini Torrent</h3>
+                                </div>
+                                <div class="project-card-description">
+                                    <p>This is a file-sharing system with a tracker server and clients communication using sockets in C++. The server can manage multiple clients and supports multiple users, groups, upload, download files from the groups they are a part of.</p>
+                                </div>
+                                <div class="project-card-tech">
+                                    <span class="tech-tag">C++</span>
+                                    <span class="tech-tag">file-sharing</span>
+                                    <span class="tech-tag">cuncurrency</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card" data-category="security" data-aos="fade-up" data-aos-delay="100">
+                            <a href="https://github.com/VatsalNilay/SecureConnect" target="_blank" style="color: white; text-decoration: none;">
+                                <div class="project-card-image" style="background-image: url('static/ddes.png');"></div>
+                                <div class="project-card-title">
+                                    <h3>Secure Connect</h3>
+                                </div>
+                                <div class="project-card-description">
+                                    <p>This client-server system uses DH key exchange to establish unique D-DES encryption keys. It features session token-based auth and HMAC validation. The server can handle multiple clients concurrently.</p>
+                                </div>
+                                <div class="project-card-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">DH key exchange</span>
+                                    <span class="tech-tag">DDES</span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="project-card" data-category="system" data-aos="fade-up" data-aos-delay="100">
+                            <a href="https://github.com/VatsalNilay/Version-Control-System" target="_blank" style="color: white; text-decoration: none;">
+                                <div class="project-card-image" style="background-image: url('static/vcs.png');"></div>
+                                <div class="project-card-title">
+                                    <h3>Version-Control-System</h3>
+                                </div>
+                                <div class="project-card-description">
+                                    <p>This mini VCS, allows users to initialize a repository, add files, and commit changes. It uses SHA-1 and stores file snapshots as blobs, trees, and commit objects, enabling users to view history and checkout specific commits.</p>
+                                </div>
+                                <div class="project-card-tech">
+                                    <span class="tech-tag">C++</span>
+                                    <span class="tech-tag">version control</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="project-card" data-category="system" data-aos="fade-up" data-aos-delay="100">
+                            <a href="https://github.com/VatsalNilay/Distri-File-System" target="_blank" style="color: white; text-decoration: none;">
+                                <div class="project-card-image" style="background-image: url('static/distributed-file-system.jpeg');"></div>
+                                <div class="project-card-title">
+                                    <h3>Distibuted File System</h3>
+                                </div>
+                                <div class="project-card-description">
+                                    <p>This distributed file system features three-way replication and load balancing for fault tolerance, while a metadata management system tracks file-to-chunk mappings and node status. The system can handle node failures and maintain data consistency.</p>
+                                </div>
+                                <div class="project-card-tech">
+                                    <span class="tech-tag">C++</span>
+                                    <span class="tech-tag">mpi</span>
+                                    <span class="tech-tag">file-system</span>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="project-card" data-category="security" data-aos="fade-up" data-aos-delay="100">
+                            <a href="https://github.com/VatsalNilay/Doctor_Patient_Comm" target="_blank" style="color: white; text-decoration: none;">
+                                <div class="project-card-image" style="background-image: url('static/secure-message.png');"></div>
+                                <div class="project-card-title">
+                                    <h3>Secure Broadcast Channel</h3>
+                                </div>
+                                <div class="project-card-description">
+                                    <p>This project facilitate encrypted communication between clients and server. It ensures this by implementing ElGamal key exchange, AES-256 encryption, and signatures. It works in three phases : initialization, authentication and key exchange, and secure messaging.</p>
+                                </div>
+                                <div class="project-card-tech">
+                                    <span class="tech-tag">python</span>
+                                    <span class="tech-tag">elgmal key exchange</span>
+                                    <span class="tech-tag">aes</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card" data-category="system" data-aos="fade-up" data-aos-delay="100">
+                            <a href="https://github.com/VatsalNilay/NimbleShell" target="_blank" style="color: white; text-decoration: none;">
+                                <div class="project-card-image" style="background-image: url('static/terminal.jpeg');"></div>
+                                <div class="project-card-title">
+                                    <h3>Nimble Shell</h3>
+                                </div>
+                                <div class="project-card-description">
+                                    <p>A fully functioning terminal, where commands like echo, ls, cd are implemented from scratch. Designed a modular architecture to handle complex user inputs, ensuring robust error handling and signal management.</p>
+                                </div>
+                                <div class="project-card-tech">
+                                    <span class="tech-tag">C++</span>
+                                    <span class="tech-tag">Terminal</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card" data-category="system" data-aos="fade-up" data-aos-delay="100">
+                            <a href="https://github.com/VatsalNilay/ReverseX" target="_blank" style="color: white; text-decoration: none;">
+                                <div class="project-card-image" style="background-image: url('static/reverse.jpeg');"></div>
+                                <div class="project-card-title">
+                                    <h3>ReverseX</h3>
+                                </div>
+                                <div class="project-card-description">
+                                    <p>This project takes a text file which can be much larger than the size of RAM and reverses it either completely or based on certain parameters. Efficiently handles large files using memory-optimized algorithms.</p>
+                                </div>
+                                <div class="project-card-tech">
+                                    <span class="tech-tag">C++</span>
+                                    <span class="tech-tag">paging</span>
+                                </div>
+                            </a>
+                        </div>
+                        
+
+                        <!-- Dummy Project Cards -->
+                        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                            <a href="https://github.com/VatsalNilay/GroceryStore" target="_blank" style="color: white; text-decoration: none;">
+                                <div class="project-card-image" style="background-image: url('static/grocery.jpeg');"></div>
+                                <div class="project-card-title">
+                                    <h3>Grocery Store</h3>
+                                </div>
+                                <div class="project-card-description">
+                                    <p>A Python app built with Flask for user and admin modes in a grocery store context. Users can add products to cart, search with filters, while admins can add products and view insights.</p>
+                                </div>
+                                <div class="project-card-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">HTML/CSS</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                            <a href="https://github.com/VatsalNilay/SkillSync" target="_blank" style="color: white; text-decoration: none;">
+                                <div class="project-card-image" style="background-image: url('static/android.jpeg');"></div>
+                                <div class="project-card-title">
+                                    <h3>Skill Sync</h3>
+                                </div>
+                                <div class="project-card-description">
+                                    <p>An Android app which recommends courses to students based on their responses in a quiz. The app also connects students to alumni based on their interests and career goals.</p>
+                                </div>
+                                <div class="project-card-tech">
+                                    <span class="tech-tag">Android</span>
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">SQLite</span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="project-card" data-category="ai" data-aos="fade-up" data-aos-delay="100">
+                            <a href="https://github.com/VatsalNilay/NewsBot" target="_blank" style="color: white; text-decoration: none;">
+                                <div class="project-card-image" style="background-image: url('static/tele-bot.jpeg');"></div>
+                                <div class="project-card-title">
+                                    <h3>Telegram News Bot</h3>
+                                </div>
+                                <div class="project-card-description">
+                                    <p>A Telegram bot that fetches news based on user-selected topics from the last month. Uses AI to categorize and filter news articles for better user experience.</p>
+                                </div>
+                                <div class="project-card-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">NLTK</span>
+                                    <span class="tech-tag">API</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                            <a href="https://github.com/VatsalNilay/Student-Management-System" target="_blank" style="color: white; text-decoration: none;">
+                                <div class="project-card-image" style="background-image: url('static/student-mgmt.jpeg');"></div>
+                                <div class="project-card-title">
+                                    <h3>Student Management System</h3>
+                                </div>
+                                <div class="project-card-description">
+                                    <p>A basic Python application for tracking and storing student data. Features include student registration, grade management, and comprehensive reporting capabilities.</p>
+                                </div>
+                                <div class="project-card-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">SQLite</span>
+                                </div>
+                            </a>
+                        </div>
+                
+                        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                            <a href="https://github.com/VatsalNilay/E-Commerce-Website" target="_blank" style="color: white; text-decoration: none;">
+                                <div class="project-card-image" style="background-image: url('static/shopping.png');"></div>
+                                <div class="project-card-title">
+                                    <h3>E Commerce App</h3>
+                                </div>
+                                <div class="project-card-description">
+                                    <p>This MERN app supports cart with product pagination and search functionality. Users can manage profiles and track orders, while an admin have insights over products, users, and order fulfillment. The app also includes a database seeder for initial data setup.</p>
+                                </div>
+                                <div class="project-card-tech">
+                                    <span class="tech-tag">Node JS</span>
+                                    <span class="tech-tag">Express</span>
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Mongo DB</span>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <a href="https://github.com/VatsalNilay/SkillSync" target="_blank" style="color: white; text-decoration: none;">
-                            <div class="project-card-image" style="background-image: url('project2.jpeg');"></div>
-                            <div class="project-card-content">
-                                <h3>Skill Sync</h3>
-                                <p>An Android app which recommends courses to students based on their responses in a quiz. The app also connects students
-                                    to alumni based on their interests.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Dummy Project Cards -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <a href="https://github.com/VatsalNilay/GroceryStore" target="_blank" style="color: white; text-decoration: none;">
-                            <div class="project-card-image" style="background-image: url('project3.jpeg');"></div>
-                            <div class="project-card-content">
-                                <h3>Grocery Store</h3>
-                                <p>It is a python app built with flask which works in two modes: Admin and User. User can add products to cart, search on filters, Admins can add 
-                                    products and view insights.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <a href="https://github.com/VatsalNilay/ReverseX" target="_blank" style="color: white; text-decoration: none;">
-                            <div class="project-card-image" style="background-image: url('project4.jpeg');"></div>
-                            <div class="project-card-content">
-                                <h3>ReverseX</h3>
-                                <p>This project takes a text file which can be much larger than the size of ram and reverse it either completely 
-                                    or based on certain parameters.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <a href="https://github.com/VatsalNilay/NewsBot" target="_blank" style="color: white; text-decoration: none;">
-                            <div class="project-card-image" style="background-image: url('project5.jpeg');"></div>
-                            <div class="project-card-content">
-                                <h3>Telegram News Bot</h3>
-                                <p>Telegram bot created in python which can fetch you news based on the topic of your choice. It can fetch you data for dating back to 1 month. </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <a href="https://github.com/VatsalNilay/Student-Management-System" target="_blank" style="color: white; text-decoration: none;">
-                            <div class="project-card-image" style="background-image: url('project6.jpeg');"></div>
-                            <div class="project-card-content">
-                                <h3>Student Management System</h3>
-                                <p>A basic app to track the students and keep their data stored made using python.</p>
-                            </div>
-                        </a>
-                    </div>
+                    <button class="scroll-btn right" style="display: none;">&gt;</button>
                 </div>
             </section>
             
-            <section id="contact">
-                <h2 data-aos="fade-up" data-aos-duration="300">Contact</h2>
-                <div class="contact-icons">
-                    <a  data-aos="fade-up" data-aos-duration="200" href="https://vatsalnilay21@gmail.com" class="icon" aria-label="Email" target="_blank">
-                        <i class="fas fa-envelope"></i>
+
+            <section id="links">
+                <h2 data-aos="fade-up" data-aos-duration="300">Links and Contact</h2>
+                <div class="links-container">
+                    <a href="https://codeforces.com/profile/nilayeah" target="_blank" class="link-item" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-trophy"></i>
+                        <span>Codeforces</span>
                     </a>
-                    <a data-aos="fade-up" data-aos-duration="200" href="tel:+918709331318" class="icon" aria-label="Phone">
-                        <i class="fas fa-phone"></i>
-                    </a>
-                    <a data-aos="fade-up" data-aos-duration="200" href="https://www.linkedin.com/in/nilay-vatsal" target="_blank" class="icon" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a data-aos="fade-up" data-aos-duration="200" href="https://github.com/VatsalNilay" target="_blank" class="icon" aria-label="GitHub">
+                    <a href="https://github.com/VatsalNilay" target="_blank" class="link-item" data-aos="fade-up" data-aos-delay="200">
                         <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://leetcode.com/u/Ven0mking/" target="_blank" class="link-item" data-aos="fade-up" data-aos-delay="150">
+                        <i class="fas fa-code"></i>
+                        <span>LeetCode</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nilay-vatsal" target="_blank" class="link-item" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:vatsalnilay21@gmail.com" target="_blank" class="link-item" data-aos="fade-up" data-aos-delay="50">
+                        <i class="fas fa-envelope"></i>
+                        <span>Mail</span>
                     </a>
                 </div>
             </section>
+            
         </div>
     </main>
     <footer>
-        <p>&copy; 2024 Nilay Vatsal. All rights reserved.</p>
+        <p>Nilay Vatsal - 2025</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -179,6 +336,56 @@
         document.querySelector('.burger').addEventListener('click', () => {
             document.querySelector('nav').classList.toggle('active');
         });
+
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        const projectsContainer = document.querySelector('.projects-container');
+        const scrollLeftBtn = document.querySelector('.scroll-btn.left');
+        const scrollRightBtn = document.querySelector('.scroll-btn.right');
+
+        const cardWidth = 350 + 20; // card width + gap
+
+        function updateProjectView(filter = 'all') {
+            let visibleCards = [];
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    card.style.display = 'flex';
+                    visibleCards.push(card);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (visibleCards.length > 3) {
+                scrollLeftBtn.style.display = 'block';
+                scrollRightBtn.style.display = 'block';
+            } else {
+                scrollLeftBtn.style.display = 'none';
+                scrollRightBtn.style.display = 'none';
+            }
+            projectsContainer.scrollLeft = 0; // Reset scroll position
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.getAttribute('data-filter');
+                updateProjectView(filter);
+            });
+        });
+
+        scrollLeftBtn.addEventListener('click', () => {
+            projectsContainer.scrollBy({ left: -cardWidth * 3, behavior: 'smooth' });
+        });
+
+        scrollRightBtn.addEventListener('click', () => {
+            projectsContainer.scrollBy({ left: cardWidth * 3, behavior: 'smooth' });
+        });
+
+        // Initial view
+        updateProjectView();
     </script>
 </body>
 </html>

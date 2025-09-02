@@ -172,55 +172,57 @@ h2 {
     justify-content: center;
 }
 
-#projects {
+/* Links Section */
+#contact {
     color: var(--text-color);
     text-align: center;
 }
 
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    justify-content: center;
-}
-
-.project-card {
+.contact-links-container {
     display: flex;
     flex-direction: column;
-    background: var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-    width: 100%; /* Responsive width */
-    max-width: 350px; /* Maximum width to keep the layout uniform */
-    height: 400px; /* Fixed height to maintain consistency */
-    color: var(--text-color);
+    gap: 30px;
+    align-items: center;
 }
 
-.project-card-image {
-    width: 100%;
-    height: 150px; /* Fixed height for all images */
-    background-size: cover;
-    background-position: center;
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-.project-card-content {
-    flex: 1;
+.link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
+    background: var(--border-color);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    min-width: 120px;
+    border: 2px solid transparent;
 }
 
-.project-card-content h3 {
-    margin: 0 0 10px;
-    font-size: 1.5em;
+.link-item:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-5px);
+    border-color: var(--link-color);
 }
 
-.project-card-content p {
-    margin: 0;
+.link-item i {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
+.link-item span {
+    font-weight: 500;
+    font-size: 1em;
+}
 
 .contact-icons {
     display: flex;
@@ -236,6 +238,232 @@ h2 {
 
 .contact-icons .icon:hover {
     color: var(--accent-color);
+}
+
+#projects {
+    color: var(--text-color);
+    text-align: center;
+}
+
+.project-filters {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background: none;
+    border: 1px solid var(--link-color);
+    color: var(--link-color);
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--link-color);
+    color: var(--bg-color);
+}
+
+.projects-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* Adjust width to show 3 cards. Card width is 350px, gap is 20px */
+    width: calc(350px * 3 + 20px * 2);
+    max-width: 100%;
+    padding: 10px 0;
+}
+
+.project-card {
+    flex: 0 0 350px; /* Do not shrink or grow, basis of 350px */
+    display: flex;
+    flex-direction: column;
+    background: var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 450px; /* Increased height for 4 sections */
+    color: var(--text-color);
+}
+
+.project-card a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(44, 62, 80, 0.8); /* Using header color with alpha */
+    color: white;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px; /* Vertically center text */
+    text-align: center;
+    transition: background-color 0.3s;
+    display: none; /* Hidden by default */
+}
+
+.scroll-btn:hover {
+    background-color: var(--accent-color);
+}
+
+.scroll-btn.left {
+    left: -25px;
+}
+
+.scroll-btn.right {
+    right: -25px;
+}
+
+.project-card-image {
+    width: 100%;
+    height: 190px; /* Increased height for images - Section 1 */
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.project-card-title {
+    height: 30px; /* Fixed height for title - Section 2 */
+    padding: 15px 20px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.project-card-title::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+}
+
+.project-card:hover .project-card-title {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.project-card:hover .project-card-title::-webkit-scrollbar {
+    width: 4px;
+}
+
+.project-card:hover .project-card-title::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.project-card:hover .project-card-title::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.project-card-title h3 {
+    margin: 0;
+    font-size: 1.3em;
+    line-height: 1.3;
+}
+
+.project-card-description {
+    height: 140px; /* Fixed height for description - Section 3 */
+    padding: 0 20px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.project-card-description::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+}
+
+.project-card:hover .project-card-description {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.project-card:hover .project-card-description::-webkit-scrollbar {
+    width: 4px;
+}
+
+.project-card:hover .project-card-description::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.project-card:hover .project-card-description::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.project-card-description p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9em;
+}
+
+.project-card-tech {
+    height: 100px; /* Fixed height for tech stack - Section 4 */
+    padding: 15px 20px;
+    border-top: 1px solid var(--border-color);
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-content: flex-start;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.project-card-tech::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+}
+
+.project-card:hover .project-card-tech {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.project-card:hover .project-card-tech::-webkit-scrollbar {
+    width: 4px;
+}
+
+.project-card:hover .project-card-tech::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.project-card:hover .project-card-tech::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.tech-tag {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
 }
 
 footer {
